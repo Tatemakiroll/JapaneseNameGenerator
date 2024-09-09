@@ -31,15 +31,15 @@ def add():
     if mode == "2":
         for i in full_names:
             username.append(i.replace(' ',"."))
-            username.append(i[1]+"."+i.split()[1])
+            username.append(i[0]+"."+i.split()[1])
             username.append(i[0:2]+"."+i.split()[1])
-            username.append(i.split()[0]+"."+i.split()[1][1])
+            username.append(i.split()[0]+"."+i.split()[1][0])
             username.append(i.split()[0]+"."+i.split()[1][0:2])
         for i in full_names_rev:
             username.append(i.replace(' ',"."))
-            username.append(i[1]+"."+i.split()[1])
+            username.append(i[0]+"."+i.split()[1])
             username.append(i[0:2]+"."+i.split()[1])
-            username.append(i.split()[0]+"."+i.split()[1][1])
+            username.append(i.split()[0]+"."+i.split()[1][0])
             username.append(i.split()[0]+"."+i.split()[1][0:2])
         for i in username:
             with open("output/japanese_userlist.txt", "a") as f:
@@ -47,15 +47,15 @@ def add():
     elif mode == "3":
         for i in full_names:
             username.append(i.replace(' ',"_"))
-            username.append(i[1]+"_"+i.split()[1])
+            username.append(i[0]+"_"+i.split()[1])
             username.append(i[0:2]+"_"+i.split()[1])
-            username.append(i.split()[0]+"_"+i.split()[1][1])
+            username.append(i.split()[0]+"_"+i.split()[1][0])
             username.append(i.split()[0]+"_"+i.split()[1][0:2])        
         for i in full_names_rev:
             username.append(i.replace(' ',"_"))
-            username.append(i[1]+"_"+i.split()[1])
+            username.append(i[0]+"_"+i.split()[1])
             username.append(i[0:2]+"_"+i.split()[1])
-            username.append(i.split()[0]+"_"+i.split()[1][1])
+            username.append(i.split()[0]+"_"+i.split()[1][0])
             username.append(i.split()[0]+"_"+i.split()[1][0:2]) 
         for i in username:
             with open("output/japanese_userlist.txt", "a") as f:
@@ -63,15 +63,15 @@ def add():
     elif mode == "4":
         for i in full_names:
             username.append(i.replace(' ',"-"))
-            username.append(i[1]+"-"+i.split()[1])
+            username.append(i[0]+"-"+i.split()[1])
             username.append(i[0:2]+"-"+i.split()[1])
-            username.append(i.split()[0]+"-"+i.split()[1][1])
+            username.append(i.split()[0]+"-"+i.split()[1][0])
             username.append(i.split()[0]+"-"+i.split()[1][0:2])        
         for i in full_names_rev:
             username.append(i.replace(' ',"-"))
-            username.append(i[1]+"-"+i.split()[1])
+            username.append(i[0]+"-"+i.split()[1])
             username.append(i[0:2]+"-"+i.split()[1])
-            username.append(i.split()[0]+"-"+i.split()[1][1])
+            username.append(i.split()[0]+"-"+i.split()[1][0])
             username.append(i.split()[0]+"-"+i.split()[1][0:2])  
         for i in username:
             with open("output/japanese_userlist.txt", "a") as f:
@@ -79,39 +79,39 @@ def add():
     else:
         for i in full_names:
             username.append(i.replace(' ',"."))
-            username.append(i[1]+"."+i.split()[1])
+            username.append(i[0]+"."+i.split()[1])
             username.append(i[0:2]+"."+i.split()[1])
-            username.append(i.split()[0]+"."+i.split()[1][1])
+            username.append(i.split()[0]+"."+i.split()[1][0])
             username.append(i.split()[0]+"."+i.split()[1][0:2])        
         for i in full_names_rev:
             username.append(i.replace(' ',"."))
-            username.append(i[1]+"."+i.split()[1])
+            username.append(i[0]+"."+i.split()[1])
             username.append(i[0:2]+"."+i.split()[1])
-            username.append(i.split()[0]+"."+i.split()[1][1])
+            username.append(i.split()[0]+"."+i.split()[1][0])
             username.append(i.split()[0]+"."+i.split()[1][0:2]) 
         for i in full_names:
             username.append(i.replace(' ',"_"))
-            username.append(i[1]+"_"+i.split()[1])
+            username.append(i[0]+"_"+i.split()[1])
             username.append(i[0:2]+"_"+i.split()[1])
-            username.append(i.split()[0]+"_"+i.split()[1][1])
+            username.append(i.split()[0]+"_"+i.split()[1][0])
             username.append(i.split()[0]+"_"+i.split()[1][0:2])        
         for i in full_names_rev:
             username.append(i.replace(' ',"_"))
-            username.append(i[1]+"_"+i.split()[1])
+            username.append(i[0]+"_"+i.split()[1])
             username.append(i[0:2]+"_"+i.split()[1])
-            username.append(i.split()[0]+"_"+i.split()[1][1])
+            username.append(i.split()[0]+"_"+i.split()[1][0])
             username.append(i.split()[0]+"_"+i.split()[1][0:2]) 
         for i in full_names:
             username.append(i.replace(' ',"-"))
-            username.append(i[1]+"-"+i.split()[1])
+            username.append(i[0]+"-"+i.split()[1])
             username.append(i[0:2]+"-"+i.split()[1])
-            username.append(i.split()[0]+"-"+i.split()[1][1])
+            username.append(i.split()[0]+"-"+i.split()[1][0])
             username.append(i.split()[0]+"-"+i.split()[1][0:2])        
         for i in full_names_rev:
             username.append(i.replace(' ',"-"))
-            username.append(i[1]+"-"+i.split()[1])
+            username.append(i[0]+"-"+i.split()[1])
             username.append(i[0:2]+"-"+i.split()[1])
-            username.append(i.split()[0]+"-"+i.split()[1][1])
+            username.append(i.split()[0]+"-"+i.split()[1][0])
             username.append(i.split()[0]+"-"+i.split()[1][0:2])
         for i in username:
             with open("output/japanese_userlist.txt", "a") as f:
