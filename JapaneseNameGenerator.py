@@ -1,5 +1,3 @@
-import time
-
 def main():
     global mode
     print("")
@@ -45,7 +43,7 @@ def add():
             username.append(i.split()[0]+"."+i.split()[1][0:2])
         for i in username:
             with open("output/japanese_userlist.txt", "a") as f:
-                f.write('\n'+i)
+                f.write(i+'\n')
     elif mode == "3":
         for i in full_names:
             username.append(i.replace(' ',"_"))
@@ -61,7 +59,7 @@ def add():
             username.append(i.split()[0]+"_"+i.split()[1][0:2]) 
         for i in username:
             with open("output/japanese_userlist.txt", "a") as f:
-                f.write('\n'+i)
+                f.write(i+'\n')
     elif mode == "4":
         for i in full_names:
             username.append(i.replace(' ',"-"))
@@ -77,7 +75,7 @@ def add():
             username.append(i.split()[0]+"-"+i.split()[1][0:2])  
         for i in username:
             with open("output/japanese_userlist.txt", "a") as f:
-                f.write('\n'+i)
+                f.write(i+'\n')
     else:
         for i in full_names:
             username.append(i.replace(' ',"."))
@@ -117,7 +115,7 @@ def add():
             username.append(i.split()[0]+"-"+i.split()[1][0:2])
         for i in username:
             with open("output/japanese_userlist.txt", "a") as f:
-                f.write('\n'+i)   
+                f.write(i+'\n')   
     print("Successfully Created Jananese Usernames")  
               
 main()
