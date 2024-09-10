@@ -104,14 +104,14 @@ def add():
             username.append(i[0:2]+"-"+i.split()[1])
             username.append(i.split()[0]+"-"+i.split()[1][0])
             username.append(i.split()[0]+"-"+i.split()[1][0:2])
-    if domain != null:
+    if domain:
       for i in username:
         with open("output/japanese_userlist.txt", "a") as f:
-          f.write(i+'\n')
+          f.write(i+'@'+domain+'\n')
     else:
       for i in username:
         with open("output/japanese_userlist.txt", "a") as f:
-          f.write(i+"@"+domain+'\n')
+          f.write(i+'\n')
     print("Successfully Created Jananese Usernames")  
               
 main()
