@@ -23,12 +23,22 @@ def fileread():
     with open("lastnames.txt", "r", encoding="utf-8") as f:
         last_names = [line.strip() for line in f.readlines()]
     full_names = [f"{last} {first}" for last in last_names for first in first_names]
+    print(len(full_names))
     full_names_rev = [f"{first} {last}" for last in last_names for first in first_names]
+    print(len(full_names_rev))
 
 def add():
     print("Generating name")
     global username
     username=[]
+    for i in full_names:
+        username.append(i[0]+i.split()[1])
+    for i in full_names:
+        username.append(i.split()[0]+i.split()[1][0])
+    for i in full_names_rev:
+        username.append(i[0]+i.split()[1])
+    for i in full_names_rev:
+        username.append(i.split()[0]+i.split()[1][0])
     if mode == "2":
         for i in full_names:
             username.append(i.replace(' ',"."))
@@ -48,7 +58,7 @@ def add():
             username.append(i[0]+"_"+i.split()[1])
             username.append(i[0:2]+"_"+i.split()[1])
             username.append(i.split()[0]+"_"+i.split()[1][0])
-            username.append(i.split()[0]+"_"+i.split()[1][0:2])        
+            username.append(i.split()[0]+"_"+i.split()[1][0:2])
         for i in full_names_rev:
             username.append(i.replace(' ',"_"))
             username.append(i[0]+"_"+i.split()[1])
@@ -60,7 +70,7 @@ def add():
             username.append(i[0]+"-"+i.split()[1])
             username.append(i[0:2]+"-"+i.split()[1])
             username.append(i.split()[0]+"-"+i.split()[1][0])
-            username.append(i.split()[0]+"-"+i.split()[1][0:2])        
+            username.append(i.split()[0]+"-"+i.split()[1][0:2])
         for i in full_names_rev:
             username.append(i.replace(' ',"-"))
             username.append(i[0]+"-"+i.split()[1])
@@ -73,31 +83,31 @@ def add():
             username.append(i[0]+"."+i.split()[1])
             username.append(i[0:2]+"."+i.split()[1])
             username.append(i.split()[0]+"."+i.split()[1][0])
-            username.append(i.split()[0]+"."+i.split()[1][0:2])        
+            username.append(i.split()[0]+"."+i.split()[1][0:2])
         for i in full_names_rev:
             username.append(i.replace(' ',"."))
             username.append(i[0]+"."+i.split()[1])
             username.append(i[0:2]+"."+i.split()[1])
             username.append(i.split()[0]+"."+i.split()[1][0])
-            username.append(i.split()[0]+"."+i.split()[1][0:2]) 
+            username.append(i.split()[0]+"."+i.split()[1][0:2])
         for i in full_names:
             username.append(i.replace(' ',"_"))
             username.append(i[0]+"_"+i.split()[1])
             username.append(i[0:2]+"_"+i.split()[1])
             username.append(i.split()[0]+"_"+i.split()[1][0])
-            username.append(i.split()[0]+"_"+i.split()[1][0:2])        
+            username.append(i.split()[0]+"_"+i.split()[1][0:2])
         for i in full_names_rev:
             username.append(i.replace(' ',"_"))
             username.append(i[0]+"_"+i.split()[1])
             username.append(i[0:2]+"_"+i.split()[1])
             username.append(i.split()[0]+"_"+i.split()[1][0])
-            username.append(i.split()[0]+"_"+i.split()[1][0:2]) 
+            username.append(i.split()[0]+"_"+i.split()[1][0:2])
         for i in full_names:
             username.append(i.replace(' ',"-"))
             username.append(i[0]+"-"+i.split()[1])
             username.append(i[0:2]+"-"+i.split()[1])
             username.append(i.split()[0]+"-"+i.split()[1][0])
-            username.append(i.split()[0]+"-"+i.split()[1][0:2])        
+            username.append(i.split()[0]+"-"+i.split()[1][0:2])
         for i in full_names_rev:
             username.append(i.replace(' ',"-"))
             username.append(i[0]+"-"+i.split()[1])
@@ -112,8 +122,7 @@ def add():
       for i in username:
         with open("output/japanese_userlist.txt", "a") as f:
           f.write(i+'\n')
-    print("Successfully Created Jananese Usernames")  
-              
+    print("Successfully Created Jananese Usernames")
 main()
 fileread()
 add()
