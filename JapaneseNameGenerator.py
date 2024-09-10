@@ -122,6 +122,14 @@ def add():
       for i in username:
         with open("output/japanese_userlist.txt", "a") as f:
           f.write(i+'\n')
+    # ファイルの読み込み
+    with open("output/japanese_userlist.txt", "r", encoding="utf-8") as file:
+        lines = file.readlines()
+    # 重複排除
+    unique_lines = list(set(lines))
+    # 結果を新しいファイルに保存
+    with open("output/japanese_userlist.txt", "w", encoding="utf-8") as file:
+        file.writelines(unique_lines)
     print("Successfully Created Jananese Usernames")
 main()
 fileread()
